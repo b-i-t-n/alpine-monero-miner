@@ -1,5 +1,7 @@
 # alpine-monero-miner
-Monero miners in alpine containers
+Monero miners in alpine containers.
+
+The goal of this project is to quickly enable you to try different miners without the hassle of knowing how to compile or install them.
 
 # Suppoerted Miners
 

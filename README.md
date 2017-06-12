@@ -15,3 +15,6 @@ Wolf cpuminer-multi
 
 # Donate
 XMR: 45CJVagd6WwQAQfAkS91EHiTyfVaJn12uM4Su8iz6S2SHZ3QthmFM9BSPHVZY388ASWx8G9Wbz4BA24RQZUpGczb35fnnJz
+
+# Contact
+Bitmessage: BM-2cTMMrCkaG2m4r9ZYx7dAqRLY7zZN2nwUe

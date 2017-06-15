@@ -1,14 +1,19 @@
 # alpine-monero-miner
 Monero mining software in a secure alpine linux container.
 
-The goal of this project is to quickly enable you to mine Monero without the hassle of knowing how to install or secure your mining software.
+The goal of this project is to quickly enable you to mine Monero without the hassle of knowing how to install or secure your mining software. Using an [Alpine Linux](https://www.alpinelinux.org/) container you get the benefit of Pax and grsecuirty and on top of this the miner runs under its own user.
 This project uses [Wolf's (OhGotAPet) cpuminer-multi](https://github.com/OhGodAPet/cpuminer-multi).
 
 This project was going to be a collection of miners but I have decided to break them up into separate repositories.
 
 # How to use
+## AES-NI
 ```bash
 # docker run bitnn/alpine-monero-miner -a cryptonight -o stratum+tcp://xmr-usa.dwarfpool.com:8005 -u 45CJVagd6WwQAQfAkS91EHiTyfVaJn12uM4Su8iz6S2SHZ3QthmFM9BSPHVZY388ASWx8G9Wbz4BA24RQZUpGczb35fnnJz -p x --threads 2
+```
+## Without AES-NI
+```bash
+# docker run bitnn/alpine-monero-miner:No-AES-NI -a cryptonight -o stratum+tcp://xmr-usa.dwarfpool.com:8005 -u 45CJVagd6WwQAQfAkS91EHiTyfVaJn12uM4Su8iz6S2SHZ3QthmFM9BSPHVZY388ASWx8G9Wbz4BA24RQZUpGczb35fnnJz -p x --threads 2
 ```
 
 # Donate

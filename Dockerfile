@@ -7,7 +7,7 @@ RUN   apk --no-cache upgrade && \
     curl-dev \
     git \
     build-base && \
-  git clone https://github.com/wolf9466/cpuminer-multi && \
+  git clone https://github.com/OhGodAPet/cpuminer-multi && \
   cd cpuminer-multi && \
     ./autogen.sh && \
     CFLAGS="-O3 -march=native" ./configure && \

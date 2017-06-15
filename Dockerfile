@@ -11,7 +11,7 @@ RUN   apk --no-cache upgrade && \
       git clone https://github.com/OhGodAPet/cpuminer-multi && \
       cd cpuminer-multi && \
         ./autogen.sh && \
-        CFLAGS="-O3 -march=native" ./configure && \
+        CFLAGS="-O3 -march=native" ./configure --disable-aes-ni && \
         make && \
       apk del \
         automake \

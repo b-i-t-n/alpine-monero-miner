@@ -13,9 +13,7 @@ RUN   apk --no-cache upgrade && \
         build-base && \
      git clone https://github.com/zcoinofficial/cpuminer-xzc && \
       cd cpuminer-xzc && \
-        ./autogen.sh && \
-        ./configure CFLAGS="-O3 -march=native" --with-crypto --with-curl && \
-        make && \
+        /build.sh && \
       apk del \
         automake \
         autoconf \

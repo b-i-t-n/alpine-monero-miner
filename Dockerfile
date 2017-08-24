@@ -4,10 +4,8 @@ RUN   apk --no-cache upgrade && \
       apk --no-cache add \
         automake \
         autoconf \
-        curl-dev \
         openssl-dev \
         libcurl \
-        gcc \
         jansson-dev \
         git \
         zlib-dev \
@@ -15,7 +13,7 @@ RUN   apk --no-cache upgrade && \
      git clone https://github.com/zcoinofficial/cpuminer-xzc && \
       cd cpuminer-xzc && \
         ./autogen.sh && \
-        ./configure CFLAGS="-march=native" --with-crypto --with-curl && \
+        ./configure CFLAGS="-O3 -march=native" --with-crypto --with-curl && \
         make && \
       apk del \
         automake \

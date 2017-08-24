@@ -1,5 +1,5 @@
 FROM  alpine:latest
-RUN   adduser -S -D -H -h /cpuminer-xzc
+#RUN   adduser -S -D -H -h /cpuminer-xzc
 RUN   apk --no-cache upgrade && \
       apk --no-cache add \
         automake \
@@ -22,7 +22,7 @@ RUN   apk --no-cache upgrade && \
         build-base \
         git
         
-USER miner
+#USER miner
 
 ENTRYPOINT	["./cpuminer-xzc"]
 

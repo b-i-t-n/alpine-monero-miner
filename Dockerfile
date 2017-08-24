@@ -4,10 +4,12 @@ RUN   apk --no-cache upgrade && \
       apk --no-cache add \
         automake \
         autoconf \
-        openssl-dev \
         curl-dev \
+        openssl-dev \
+        libcurl \
         jansson-dev \
         git \
+        zlib-dev \
         build-base && \
      git clone https://github.com/zcoinofficial/cpuminer-xzc && \
       cd cpuminer-xzc && \

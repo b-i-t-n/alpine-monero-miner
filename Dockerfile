@@ -7,6 +7,7 @@ RUN   apk --no-cache upgrade && \
         curl-dev \
         openssl-dev \
         libcurl \
+        gcc \
         jansson-dev \
         git \
         zlib-dev \

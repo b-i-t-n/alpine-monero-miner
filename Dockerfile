@@ -1,23 +1,27 @@
 FROM  alpine:latest
-RUN   adduser -S -D -H -h /cpuminer-multi miner
+#RUN   adduser -S -D -H -h /cpuminer-xzc
 RUN   apk --no-cache upgrade && \
       apk --no-cache add \
         automake \
         autoconf \
-        openssl-dev \
         curl-dev \
+        libssl1.0 \
+        libcurl \
+        jansson-dev \
         git \
+        zlib-dev \
         build-base && \
-      git clone https://github.com/OhGodAPet/cpuminer-multi && \
-      cd cpuminer-multi && \
-        ./autogen.sh && \
-        CFLAGS="-O3 -march=native" ./configure && \
-        make && \
+     git clone https://github.com/zcoinofficial/cpuminer-xzc && \
+      cd cpuminer-xzc && \
+        /build.sh && \
       apk del \
         automake \
         autoconf \
         build-base \
         git
-USER miner
-WORKDIR    /cpuminer-multi
-ENTRYPOINT  ["./minerd"]
+        
+#USER miner
+
+ENTRYPOINT	["./cpuminer-xzc"]
+
+CMD ["--help"]
